@@ -11,6 +11,65 @@
  <link rel="stylesheet" href="new.css" type="text/css" />
  <link rel="stylesheet" href="css/fontello.css" type="text/css" />
  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+	
+ <style>
+   .open-button {
+   background-color: #2ab7c9;
+   color: white;
+   padding: 8px 154px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   opacity: 1;
+   }
+   .send-popup {
+   position: relative;
+   text-align: center;
+   width: 100%;
+   }
+   .form-popup {
+   display: none;
+   position: fixed;
+   left: 45%;
+   top:5%;
+   transform: translate(-45%,5%);
+   border: 2px solid #666;
+   z-index: 9;
+   }
+   .form-container {
+   max-width: 500px;
+   padding: 20px;
+   background-color: #fff;
+   }
+   .form-container input[type=text], .form-container input[type=password], textarea {
+   width: 90%;
+   padding: 10px;
+   margin: 5px 0 22px 0;
+   border: none;
+   background: #eee;
+   }
+   .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+   }
+   .form-container textarea { height: 80px; resize: none; }
+   .form-container .btn {
+   background-color: #8ebf42;
+   color: #fff;
+   padding: 12px 20px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   margin-bottom:10px;
+   opacity: 0.8;
+   }
+   .form-container .cancel {
+   background-color: #cc0000;
+   }
+   .form-container .btn:hover, .open-button:hover {
+   opacity: 1;
+   }
+  </style>
 </head>
 <body>
 	<div id ="container">
@@ -43,7 +102,12 @@
 			Nr. tel: 600 090 012<br>
 			Mail firmy: studio.h&s@adres.com<br>
 			
-			ZAPRASZAMY DO KONTAKTU !!!
+			ZAPRASZAMY DO KONTAKTU !!!<br>
+			<br>
+                        <div class="open-btn">
+                        <button class="open-button" onclick="openForm()"><strong>NAPISZ DO NAS!</strong></button>
+                        </div>
+				
 			</div>
 			<a href="http://youtube.com" target="_blank" class="tilelink"><div class="yt"><i class="icon-youtube"></i></div></a>
 			<a href="http://facebook.com" target="_blank" class="tilelink"><div class="fb"><i class="icon-facebook"></i></div></a>
@@ -56,7 +120,34 @@
 		<div class="rectangle">2015 &copy; Studio Hardware and Software. Firma tworząca oprogramowania zaprasza do współpracy!<br>
 		<i class="icon-mail-alt"></i>studio.h&s@adres.com</div>
 		
+		 <div class="send-popup">
+     		  <div class="form-popup" id="popupForm">
+     		    <form action="/action_page.php" class="form-container">
+       		      <h2><font color="black">Napisz do nas</h2></font color>
+        	      <label for="email">
+                      <strong><font color="black"> E-mail</strong></font color>
+                      </label>
+                      <input type="text" id="email" placeholder="Twój Email" name="email" required>
+                      <label for="message">
+                      <strong><font color="black"> Wiadomość</strong></font color>
+                      </label>
+                      <textarea id="message" placeholder="Wiadomość"></textarea>
+                      <button type="submit" class="btn" onclick="closeForm()">Wyślij</button>
+                      <button type="button" class="btn cancel" onclick="closeForm()">Zamknij</button>
+                    </form>
+                  </div>
+                </div>
+		
 	</div>
+	 <script>
+          function openForm() {
+            document.getElementById("popupForm").style.display="block";
+          }
+           
+          function closeForm() {
+            document.getElementById("popupForm").style.display="none";
+          }
+        </script>
 </body>
 </html>
  
