@@ -64,7 +64,7 @@ Attention for server setup
 --------------------------
 
 You MUST setup server to reply with proper `mime-types` for font files -
-otherwise some browsers will fail to show fonts.
+otherwise some browsers will fail to show fonts
 
 Usually, `apache` already has necessary settings, but `nginx` and other
 webservers should be tuned. Here is list of mime types for our file extensions:
