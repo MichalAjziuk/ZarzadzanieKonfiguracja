@@ -57,7 +57,7 @@ body
 }
 .tile1:hover
 {
-	background-color:#2084c2;
+	background-color:#1d81bf;
 }
 .tile2
 {
@@ -70,7 +70,7 @@ body
 }
 .tile2:hover
 {
-	background-color:#555555;
+	background-color:#545353;
 }
 
 .tile3
@@ -78,7 +78,7 @@ body
 	margin:10px;
 	width:220px;
 	height:142px;
-	background-color:#93c748;
+	background-color:#93c944;
 	float:left;
 	text-align:center;
 }
@@ -91,7 +91,7 @@ body
 	margin:10px;
 	width:400px;
 	height:82px;
-	background-color:#ee5a32;
+	background-color:#eb532a;
 	text-align:center;
 	font-size: 23px;
 	padding:30px;
@@ -103,7 +103,7 @@ body
 	margin:10px;
 	width:420px;
 	height:264px;
-	background-color:#666666;
+	background-color:#6b6a6a;
 	padding:20px;
 }
 
