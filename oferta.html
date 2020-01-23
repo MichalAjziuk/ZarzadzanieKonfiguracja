@@ -11,30 +11,31 @@
  <link rel="stylesheet" href="new.css" type="text/css" />
  <link rel="stylesheet" href="css/fontello.css" type="text/css" />
  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+<script type="text/javascript" src="timer.js"></script>
 </head>
-<body>
-	<div id ="container">
-	 
-		<div class="rectangle">
-			<div id="logo"><a href="Witryna.html" class="tilelink">Studio Hardware & Software</a></div>
-			<div id="zegar">12:00:00</div>
-			<div style="clear:both;"</div>
-		</div>
-		
-		<div class="square">
-			<a href="naszeprojekty.html" class="tilelink"><div class="tile1"><i class="icon-user"></i><br>Nasze projekty</div></a>
-			<a href="oferta.html" class="tilelink"><div class="tile1"><i class="icon-laptop"></i><br>Co oferujemy ?</div></a>
-			<div style="clear:both;"></div>
-			
-			<a href="wyksztalcenie.html" class="tilelink"><div class="tile2"><i class="icon-graduation-cap"></i><br>Wykształcenie</div></a>
-			<a href="kontakt.html" class="tilelink"><div class="tile3"><i class="icon-mail"></i><br>Kontakt</div></a>
-			<div style="clear:both;"></div>
-			
-			<div class="tile4"><i>Talk is cheap. Show me the code!</i><br/>- Linus Torvalds, twórca Linuxa</div>
-		</div>
-		
-		<div class="square">
-			<div class="tile5">
+<body onload="odliczanie()">
+<div id ="container">
+
+	<div class="rectangle">
+		<div id="logo"><a href="Witryna.html" class="tilelink">Studio Hardware & Software</a></div>
+		<div id="zegar"></div>
+		<div style="clear:both;"></div>
+	</div>
+
+	<div class="square">
+		<a href="naszeprojekty.html" class="tilelink"><div class="tile1"><i class="icon-user"></i><br>Nasze projekty</div></a>
+		<a href="oferta.html" class="tilelink"><div class="tile1"><i class="icon-laptop"></i><br>Co oferujemy ?</div></a>
+		<div style="clear:both;"></div>
+
+		<a href="wyksztalcenie.html" class="tilelink"><div class="tile2"><i class="icon-graduation-cap"></i><br>Wykształcenie</div></a>
+		<a href="kontakt.html" class="tilelink"><div class="tile3"><i class="icon-mail"></i><br>Kontakt</div></a>
+		<div style="clear:both;"></div>
+
+		<div class="tile4"><i>Talk is cheap. Show me the code!</i><br/>- Linus Torvalds, twórca Linuxa</div>
+	</div>
+
+	<div class="square">
+		<div class="tile5">
 			Tworzenie oprogramowania -> projektowanie i budowa aplikacji webowych i mobilnych <br>
 			Utrzymanie i rozwój -> monitoring, opieka i rozwój aplikacji <br>
 			Strategia i design -> tworzenie prototypów, MVP, i designu dla aplikacji <br>
