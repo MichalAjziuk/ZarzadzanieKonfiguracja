@@ -13,6 +13,22 @@
  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 <script type="text/javascript" src="timer.js"></script>
 <script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript">
+
+		function dozakladek(nazwa,url){
+			if (window.sidebar)
+				window.sidebar.addPanel(nazwa, url, "");
+			else if(window.opera && window.print){
+				var elem = document.createElement('a');
+				elem.setAttribute('href',url);
+				elem.setAttribute('title',nazwa);
+				elem.setAttribute('rel','sidebar');
+				elem.click();
+			}
+			else if(document.all)
+				window.external.AddFavorite(url, nazwa);
+		}
+	</script>
 </head>
 <body onload="odliczanie()">
 <div id ="container">
@@ -55,6 +71,7 @@
 		<i class="icon-mail-alt"></i>studio.h&s@adres.com</div>
 		
 	</div>
+	<a href="javascript:dozakladek('Nazwa Twojej strony')">Dodaj do zakładek!</a>
 </body>
 </html>
  
